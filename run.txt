@@ -1,0 +1,31 @@
+For USPTO-50K
+
+Retro-SD
+
+bash ./PCL_scripts/uspto50k_aug20_o2m/Retro-SD.sh
+
+bash ./PCL_scripts/uspto50k_aug20_o2m/test2.sh
+
+Baseline
+
+bash ./PCL_scripts/uspto50k_aug20_o2m_baseline/baseline.sh
+
+bash ./PCL_scripts/uspto50k_aug20_o2m_baseline/test2.sh
+
+Shuffle
+
+bash ./PCL_scripts/uspto50k_aug20_o2m_shuffle/shuffle.sh
+
+bash ./PCL_scripts/uspto50k_aug20_o2m_shuffle/test2.sh
+
+FSL
+
+bash ./PCL_scripts/uspto50k_aug20_o2m_fsl/FSL.sh
+
+bash ./PCL_scripts/uspto50k_aug20_o2m_fsl/test2.sh
+
+USPTO-FULL
+
+bash ./PCL_scripts/usptofull_aug5_o2m/Full.sh
+
+bash ./PCL_scripts/usptofull_aug5_o2m/test2.sh
