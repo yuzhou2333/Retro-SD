@@ -11,6 +11,7 @@ portalocker==2.0.0
 pycparser==2.21
 PyYAML==6.0
 regex==2021.11.2
+rdkit==2023.9.3
 sacrebleu==1.5.1
 tabulate==0.8.9
 torch==1.10.0
