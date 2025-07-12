@@ -1,53 +1,148 @@
-# Retrosysthesis Self-Distillation
+# Retrosynthesis Self-Distillation
 
-## Install
-### 1. Downloading this repository.
-```git clone``` or downloading the zip directly.
-### 2. Installing the dependency.
+A deep learning framework for retrosynthesis prediction using self-distillation techniques.
 
-```pip install -r requirements.txt```
+## 📋 Table of Contents
 
-```pip install --editable ./ ```
+- [Installation](#installation)
+- [Data Preparation](#data-preparation)
+- [Training](#training)
+- [Testing](#testing)
+- [Prediction](#prediction)
+- [Model Access](#model-access)
 
-```python setup.py build_ext --inplace ```
+## 🚀 Installation
 
-### 3. zip the data file to folder(data-bin)
+### 1. Clone the Repository
 
-```unzip uspto50k_aug20_o2m.zip -d data_bin/```
+```bash
+git clone <repository-url>
+cd Retro-SD
+```
 
-### 4. Training.
+Alternatively, you can download the zip file directly.
 
-replace the "project_path" to the real path.
-replace the "python_path" to the real path.
-replace the "path_2_data" to the real path.
+### 2. Install Dependencies
 
-run the command according to the run.txt.Here is a example:
+Install the required Python packages:
 
-```bash ./PCL_scripts/uspto50k_aug20_o2m/Retro-SD.sh```
+```bash
+pip install -r requirements.txt
+```
 
-```bash ./PCL_scripts/uspto50k_aug20_o2m/test2.sh```
+Install the package in editable mode:
 
-### 5. Predicting.
+```bash
+pip install --editable ./
+```
 
-move the "combine.py, score.sh, score.py and take.py" in the results folder to the real prediction folder like "./results/Retro-SD/157"
+Build the extension modules:
 
-After completing the above steps, execute the following command within this folder:
+```bash
+python setup.py build_ext --inplace
+```
 
-```python take.py```
+## 📁 Data Preparation
 
-```python combine.py```
+### 3. Extract Data Files
 
-```bash score.sh```
+Extract the data archive to the `data_bin` folder:
 
-You can change the targets and predictions in "score.sh" to get the corresponding accuracy.
+```bash
+unzip uspto50k_aug20_o2m.zip -d data_bin/
+```
 
-like:
+## 🎯 Training
 
+### 4. Configure Training Scripts
+
+Before running the training scripts, you need to update the following paths in the shell scripts:
+
+- `project_path`: Set to your actual project directory path
+- `python_path`: Set to your Python executable path  
+- `path_2_data`: Set to your data directory path
+
+### 5. Run Training
+
+Execute the training script:
+
+```bash
+./PCL_scripts/uspto50k_aug20_o2m/Retro-SD.sh
+```
+
+For additional training configurations, refer to the `run.txt` file for more examples.
+
+## 🧪 Testing
+
+### 6. Run Test Scripts
+
+Execute the test script:
+
+```bash
+./PCL_scripts/uspto50k_aug20_o2m/test2.sh
+```
+
+## 🔮 Prediction
+
+### 7. Prepare Prediction Environment
+
+Move the following files from the main directory to your prediction results folder (e.g., `./results/Retro-SD/157`):
+
+- `combine.py`
+- `score.sh`
+- `score.py`
+- `take.py`
+
+### 8. Generate Predictions
+
+Navigate to your prediction folder and execute the following commands in sequence:
+
+```bash
+python take.py
+```
+
+```bash
+python combine.py
+```
+
+```bash
+bash score.sh
+```
+
+### 9. Evaluate Different Reaction Types
+
+You can modify the `score.sh` script to evaluate different target and prediction files:
+
+**For all reaction types evaluation:**
+```bash
 -targets ./targets.txt \
 -predictions ./predictions.txt \
+```
 
+**For high-resource reaction classes evaluation:**
+```bash
 -targets ./targets_high.txt \
 -predictions ./predictions_high.txt \
+```
 
+**For low-resource reaction classes evaluation:**
+```bash
 -targets ./targets_low.txt \
 -predictions ./predictions_low.txt \
+```
+
+## 📚 Model Access
+
+Pre-trained models will be available at:
+🔗 [Model Repository](# "Coming Soon")
+
+## 📝 Notes
+
+- Ensure all file paths are correctly configured before running any scripts
+- The training process may take considerable time depending on your hardware
+- Make sure you have sufficient disk space for the data and model checkpoints
+- Self-distillation technique helps improve model performance through knowledge transfer
+
+---
+
+*For additional support or questions, please refer to the documentation or open an issue.*
