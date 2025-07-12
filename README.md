@@ -132,7 +132,7 @@ You can modify the `score.sh` script to evaluate different target and prediction
 ```
 
 ## 📚 Model Access
-
+(Comming soon)
 Pre-trained models will be available at:
 🔗 [Model Repository](# "Coming Soon")
 
