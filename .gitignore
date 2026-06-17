@@ -122,7 +122,6 @@ Thumbs.db
 *.pickle
 *.h5
 *.hdf5
-data_bin/
 save_models/
 checkpoints/
 results/
